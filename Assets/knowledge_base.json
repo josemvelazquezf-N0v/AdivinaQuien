@@ -1,0 +1,19 @@
+{
+  "plantilla_pregunta": "¿El bloque secreto {accion} {caracteristica}?",
+  "atributos": {
+    "luz": {"accion": "emite", "caracteristica": "luz propia"},
+    "gravedad": {"accion": "tiene", "caracteristica": "físicas de gravedad (se cae)"},
+    "fuego": {"accion": "es", "caracteristica": "inflamable"},
+    "nether": {"accion": "se genera en", "caracteristica": "el Nether"},
+    "redstone": {"accion": "es", "caracteristica": "un componente de Redstone"},
+    "herramienta_pico": {"accion": "requiere", "caracteristica": "un pico para minarse rápido"}
+  },
+  "bloques": [
+    {"nombre": "Piedra Luminosa (Glowstone)", "conexiones": ["luz", "nether", "herramienta_pico"]},
+    {"nombre": "Arena", "conexiones": ["gravedad"]},
+    {"nombre": "Lana", "conexiones": ["fuego"]},
+    {"nombre": "Polvo de Redstone", "conexiones": ["redstone"]},
+    {"nombre": "Antorcha de Redstone", "conexiones": ["luz", "redstone"]},
+    {"nombre": "Grava", "conexiones": ["gravedad"]}
+  ]
+}
