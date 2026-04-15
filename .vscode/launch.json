@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "▶️ Correr Juego (Streamlit)",
+      "name": " Correr Juego (Streamlit)",
       "type": "python",
       "request": "launch",
       "module": "streamlit",

@@ -47,7 +47,7 @@ def filtrar_bloques(id_atributo, tiene_atributo):
     st.session_state.atributos_usados.add(id_atributo)
 
 # --- 4. Interfaz Visual (GUI) ---
-st.title("Adivina Quién: Minecraft 🟩")
+st.title("Adivina Quién: Minecraft ")
 st.write("Piensa en un bloque y yo adivinaré cuál es.")
 
 # Verificar si el juego terminó
@@ -74,16 +74,16 @@ else:
             caracteristica=attr_data['caracteristica']
         )
         
-        st.subheader(f"🤖 IA: {pregunta}")
+        st.subheader(f" IA: {pregunta}")
         
         # Botones de Sí y No
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("✅ Sí", use_container_width=True):
+            if st.button("Sí", use_container_width=True):
                 filtrar_bloques(mejor_attr, True)
                 st.rerun() # Recarga la página con los nuevos datos
         with col2:
-            if st.button("❌ No", use_container_width=True):
+            if st.button("No", use_container_width=True):
                 filtrar_bloques(mejor_attr, False)
                 st.rerun()
 
