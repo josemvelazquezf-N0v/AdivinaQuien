@@ -1,19 +1,644 @@
 {
-  "plantilla_pregunta": "¿El bloque secreto {accion} {caracteristica}?",
-  "atributos": {
-    "luz": {"accion": "emite", "caracteristica": "luz propia"},
-    "gravedad": {"accion": "tiene", "caracteristica": "físicas de gravedad (se cae)"},
-    "fuego": {"accion": "es", "caracteristica": "inflamable"},
-    "nether": {"accion": "se genera en", "caracteristica": "el Nether"},
-    "redstone": {"accion": "es", "caracteristica": "un componente de Redstone"},
-    "herramienta_pico": {"accion": "requiere", "caracteristica": "un pico para minarse rápido"}
-  },
-  "bloques": [
-    {"nombre": "Piedra Luminosa (Glowstone)", "conexiones": ["luz", "nether", "herramienta_pico"]},
-    {"nombre": "Arena", "conexiones": ["gravedad"]},
-    {"nombre": "Lana", "conexiones": ["fuego"]},
-    {"nombre": "Polvo de Redstone", "conexiones": ["redstone"]},
-    {"nombre": "Antorcha de Redstone", "conexiones": ["luz", "redstone"]},
-    {"nombre": "Grava", "conexiones": ["gravedad"]}
-  ]
+    "plantilla_pregunta": "¿El bloque secreto {accion} {caracteristica}?",
+    "atributos": {
+        "emite_luz": {
+            "accion": "emite",
+            "caracteristica": "luz propia"
+        },
+        "es_transparente": {
+            "accion": "es",
+            "caracteristica": "transparente al menos en una parte"
+        },
+        "se_puede_minar": {
+            "accion": "es",
+            "caracteristica": "rompible (no es bedrock)"
+        },
+        "es_inflamable": {
+            "accion": "puede",
+            "caracteristica": "prenderse en fuego"
+        }
+    },
+    "bloques": [
+        {
+            "nombre": "Stone",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Granite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Polished Granite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Diorite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Polished Diorite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Andesite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Polished Andesite",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Grass Block",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dirt",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Coarse Dirt",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Podzol",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cobblestone",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Oak Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Spruce Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Birch Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Jungle Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Acacia Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cherry Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dark Oak Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Bamboo Planks",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Bamboo Mosaic",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Oak Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Spruce Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Birch Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Jungle Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Acacia Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cherry Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dark Oak Sapling",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Propagule",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Bedrock",
+            "conexiones": []
+        },
+        {
+            "nombre": "Water",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Lava",
+            "conexiones": [
+                "emite_luz",
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Sand",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Suspicious Sand",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Red Sand",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Gravel",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Suspicious Gravel",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Gold Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Deepslate Gold Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Iron Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Deepslate Iron Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Coal Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Deepslate Coal Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Nether Gold Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Oak Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Spruce Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Birch Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Jungle Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Acacia Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cherry Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dark Oak Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Roots",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Muddy Mangrove Roots",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Block of Bamboo",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Spruce Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Birch Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Jungle Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Acacia Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Cherry Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Dark Oak Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Oak Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Mangrove Log",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Block of Stripped Bamboo",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Oak Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Spruce Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Birch Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Jungle Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Acacia Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cherry Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dark Oak Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Oak Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Spruce Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Birch Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Jungle Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Acacia Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Cherry Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Dark Oak Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Stripped Mangrove Wood",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Oak Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Spruce Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Birch Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Jungle Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Acacia Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Cherry Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dark Oak Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Mangrove Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Azalea Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Flowering Azalea Leaves",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Sponge",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Wet Sponge",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Glass",
+            "conexiones": [
+                "es_transparente",
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Lapis Lazuli Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Deepslate Lapis Lazuli Ore",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Block of Lapis Lazuli",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Dispenser",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Sandstone",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        },
+        {
+            "nombre": "Chiseled Sandstone",
+            "conexiones": [
+                "se_puede_minar"
+            ]
+        }
+    ]
 }
