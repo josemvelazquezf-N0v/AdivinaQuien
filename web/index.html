@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adivina el Bloque · Guess Who Minecraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-row">
+      <div class="hero-mark" aria-hidden="true">
+        <div class="cube">
+          <span class="face top"></span>
+          <span class="face left"></span>
+          <span class="face right"></span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">cube · guess</p>
+        <h1>Adivina <span>el Bloque</span></h1>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="stat-candidatos">—</span>
+          <span class="stat-lbl">candidatos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="stat-pregunta">0</span>
+          <span class="stat-lbl">pregunta</span>
+        </div>
+      </div>
+    </div>
+    <div class="meter-bar">
+      <div class="meter-fill" id="meter-fill"></div>
+    </div>
+  </header>
+
+  <main class="board" id="board">
+    <!-- El contenido del centro se renderiza por JS -->
+    <section id="contenido" class="contenido">
+      <div class="welcome">
+        <div class="welcome-art" aria-hidden="true">
+          <div class="block-stack">
+            <span style="--c1:#7fa85b;--c2:#5d8442"></span>
+            <span style="--c1:#a47148;--c2:#7d5635"></span>
+            <span style="--c1:#9c9c9c;--c2:#6e6e6e"></span>
+          </div>
+        </div>
+        <h2 class="welcome-title">Piensa en un bloque.</h2>
+        <p class="welcome-sub">Yo intentaré adivinarlo en menos de 25 preguntas.</p>
+        <button id="btn-iniciar" class="btn primario big">
+          <span>Empezar</span>
+          <i class="arrow">▶</i>
+        </button>
+        <p class="welcome-hint">o presiona <kbd>↵</kbd></p>
+      </div>
+    </section>
+
+    <aside class="sidebar" id="sidebar" aria-label="Posibilidades restantes">
+      <div class="sidebar-head">
+        <span class="sidebar-title">Posibilidades</span>
+        <span class="sidebar-count" id="sidebar-count">—</span>
+      </div>
+      <div class="sidebar-grid" id="sidebar-grid">
+        <p class="sidebar-empty">aparece cuando queden pocas</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="status-bar">
+    <span class="dot"></span>
+    <span id="status-text">esperando inicio</span>
+    <span class="sep">·</span>
+    <span class="hint-keys">
+      <kbd>S</kbd> sí <kbd>N</kbd> no <kbd>X</kbd> no sé
+    </span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
