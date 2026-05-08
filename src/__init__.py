@@ -1,1 +1,0 @@
-"""Adivina Quien - Minecraft Edition."""
