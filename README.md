@@ -1,4 +1,4 @@
-readme_content = """# Adivina Quien: Minecraft Edition
+# Adivina Quien: Minecraft Edition
 
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.20+-62B037?style=for-the-badge&logo=minecraft&logoColor=white)
@@ -48,7 +48,7 @@ Cuando la IA llega a un punto donde varios bloques tienen las mismas caracterist
 
 La IA preguntara primero por el bloque mas popular, optimizando el tiempo de respuesta basandose en la popularidad y el comportamiento historico de los jugadores.
 
-Atributos Analizados
+### Atributos Analizados
 El motor de busqueda filtra los bloques basandose en:
 
 Fisica: Solidez, transparencia y emision de luz.
